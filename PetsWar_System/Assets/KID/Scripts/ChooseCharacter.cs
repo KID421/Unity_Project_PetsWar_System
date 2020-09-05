@@ -1,5 +1,6 @@
-﻿using System.Xml.Schema;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
+using System.Xml;
 
 namespace KID
 {
@@ -40,15 +41,30 @@ namespace KID
                     index++;
                     if (index == 4) index = 0;
                     players[i].character = (Character)(index);
+
+                    StopAllCoroutines();
+                    StartCoroutine(Move(chooseBox[i], chooseBoxPosition[index]));
                 }
                 if (Input.GetKeyDown(players[i].left))
                 {
                     index--;
                     if (index == -1) index = 3;
                     players[i].character = (Character)(index);
+
+                    StopAllCoroutines();
+                    StartCoroutine(Move(chooseBox[i], chooseBoxPosition[index]));
                 }
 
-                chooseBox[i].anchoredPosition = chooseBoxPosition[index];
+                //chooseBox[i].anchoredPosition = chooseBoxPosition[index];
+            }
+        }
+
+        private IEnumerator Move(RectTransform target, Vector3 pos)
+        {
+            while (target.anchoredPosition.x != pos.x)
+            {
+                target.anchoredPosition = Vector3.Slerp(target.anchoredPosition, pos, Time.deltaTime * 50);
+                yield return null;
             }
         }
     }
