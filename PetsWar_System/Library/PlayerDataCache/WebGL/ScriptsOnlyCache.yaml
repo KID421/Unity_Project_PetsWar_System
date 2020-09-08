@@ -1,7 +1,8 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - KID.ChooseCharacter
+    - DanceManager
+    - DancePlayerManager
     - KID.PlayerData
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -18,12 +19,15 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
-    "Assets/\u9078\u64C7\u89D2\u8272.unity":
+    "Assets/KID/\u5834\u666F/\u52C1\u821E\u5718.unity":
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -38,6 +42,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -49,15 +57,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11348}
     - Class: 114
+      Script: {instanceID: 11400}
+    - Class: 114
+      Script: {instanceID: 11666}
+    - Class: 114
       Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 12082}
+      Script: {instanceID: 12116}
     - Class: 114
       Script: {instanceID: 12502}
     - Class: 114
       Script: {instanceID: 12594}
     - Class: 114
       Script: {instanceID: 12944}
+    - Class: 114
+      Script: {instanceID: 18436}
+    - Class: 114
+      Script: {instanceID: 49732}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -377,7 +393,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 81fe94ee852844d042981446f71fab48
+      Hash: 358651b79d07e4944b46fc358dbbd40b
     assemblyName: Assembly-CSharp.dll
     namespaceName: KID
     className: PlayerData
@@ -519,7 +535,25 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 1a6defa92e4251f3b1fd5e5c306c23e3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DanceManager
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DanceNode
+  - hash:
+      serializedVersion: 2
+      Hash: 90a2f82c2960d07995685873628c2d66
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DancePlayerManager
   platform: 20
   scenePathNames:
-  - "Assets/\u9078\u64C7\u89D2\u8272.unity"
-  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/ChooseCharacter
+  - "Assets/KID/\u5834\u666F/\u52C1\u821E\u5718.unity"
+  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/GameDance
