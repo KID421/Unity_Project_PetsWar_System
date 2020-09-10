@@ -138,7 +138,7 @@ public class DanceManager : MonoBehaviour
                 temp.gameObject.AddComponent<DanceNode>().speed = speed;
             }
 
-            yield return new WaitForSeconds(interval);
+            yield return new WaitForSecondsRealtime(interval);
         }
     }
 

@@ -22,6 +22,7 @@ public class DancePlayerManager : MonoBehaviour
             {
                 float volume = Random.Range(0.8f, 1.2f);
                 float pitch = Random.Range(0.8f, 1.2f);
+                aud.Stop();
                 aud.pitch = pitch;
                 aud.PlayOneShot(sounds[0], volume);
             }

@@ -2306,9 +2306,9 @@ MonoBehaviour:
   soundBGMs:
   - {fileID: 8300000, guid: e26d010d53536354699e1ce7e183cfba, type: 3}
   - {fileID: 8300000, guid: 604af73fda0e647429939e15f8137d2a, type: 3}
-  interval: 0.63
-  speed: 290
-  x: 780
+  interval: 0.6
+  speed: 310
+  x: 600
   nodes: 
 --- !u!114 &1555550328
 MonoBehaviour:

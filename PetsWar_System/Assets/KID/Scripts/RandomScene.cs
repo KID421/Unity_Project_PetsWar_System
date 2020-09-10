@@ -16,8 +16,8 @@ namespace KID
         {
             get
             {
-                for (int i = 0; i < SceneManager.sceneCountInBuildSettings - 1; i++)
-                    _allScene.Add(SceneManager.GetSceneAt(i + 1).name);
+                for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+                    _allScene.Add(SceneManager.GetSceneByBuildIndex(i).name);
 
                 return _allScene;
             }
@@ -29,12 +29,12 @@ namespace KID
         /// <returns>隨機場景名稱</returns>
         public static string LoadRandomScene()
         {
-            int r = Random.Range(0, allScene.Count);    // 取得隨機整數 0 至所有場景數量
+            int r = Random.Range(0, _allScene.Count);    // 取得隨機整數 0 至所有場景數量
 
-            string scene = allScene[r];                 // 取得隨機場景名稱
-            allScene.RemoveAt(r);                       // 刪除取得的場景名稱
+            string scene = _allScene[r];                 // 取得隨機場景名稱
+            _allScene.RemoveAt(r);                       // 刪除取得的場景名稱
 
-            return scene;                               // 傳回隨機場景名稱
+            return scene;                                // 傳回隨機場景名稱
         }
     }
 }
