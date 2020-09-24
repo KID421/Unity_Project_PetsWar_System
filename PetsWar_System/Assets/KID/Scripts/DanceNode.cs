@@ -20,6 +20,8 @@ public class DanceNode : MonoBehaviour
 
     private DanceManager dm;
 
+    public List<DancdNodeType> nodes = new List<DancdNodeType>();
+
     private void Awake()
     {
         dm = FindObjectOfType<DanceManager>();
@@ -34,9 +36,9 @@ public class DanceNode : MonoBehaviour
             outOfLine = true;
             dm.nodePlaysIndex[indexPlayer]++;
         }
-        if (outOfLine && GetComponent<RectTransform>().anchoredPosition.x <= -380)
+        if (outOfLine && GetComponent<RectTransform>().anchoredPosition.x <= -360)
         {
-            List<DancdNodeType> nodes = dm.nodesPlays[indexPlayer];
+            nodes = dm.nodesPlays[indexPlayer];
             nodes[dm.nodePlaysIndex[indexPlayer] - 1] = DancdNodeType.無;
         }
     }

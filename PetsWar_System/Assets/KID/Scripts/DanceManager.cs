@@ -77,7 +77,7 @@ public class DanceManager : MonoBehaviour
     {
         if (listNote.Count == countLimit) return;                                                   // 如果 節點總數 等於 上限
 
-        DancdNodeType danceNote = (DancdNodeType)danceNoteIndex;                                            // 數字轉為節點列舉
+        DancdNodeType danceNote = (DancdNodeType)danceNoteIndex;                                    // 數字轉為節點列舉
         listNote.Add(danceNote);                                                                    // 節點增加到清單內
 
         if (updateTip) textCount.text = "節點數量：" + listNote.Count + " / " + countLimit;          // 更新文字
