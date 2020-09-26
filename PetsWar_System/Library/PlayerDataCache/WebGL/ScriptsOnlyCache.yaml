@@ -58,23 +58,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11158}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11364}
     - Class: 114
-      Script: {instanceID: 11658}
+      Script: {instanceID: 11664}
     - Class: 114
-      Script: {instanceID: 11754}
+      Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12108}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12554}
+      Script: {instanceID: 12560}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 13012}
+      Script: {instanceID: 13018}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -568,6 +568,24 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DanceManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1d845b2535654b2525956159b2714d86
+    assemblyName: Unity.2D.SpriteShape.Runtime.dll
+    namespaceName: UnityEngine.U2D
+    className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
+      Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
+    assemblyName: Unity.2D.SpriteShape.Runtime.dll
+    namespaceName: 
+    className: SpriteShapeGeometryCache
+  - hash:
+      serializedVersion: 2
+      Hash: 0edeba255bdbade25edc357f1412ba38
+    assemblyName: Unity.2D.SpriteShape.Runtime.dll
+    namespaceName: UnityEngine.U2D
+    className: SpriteShape
   platform: 20
   scenePathNames:
   - "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity"
