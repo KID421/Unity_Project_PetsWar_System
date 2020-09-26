@@ -14,11 +14,13 @@ namespace KID
         public PlayerData[] players;
         [Header("選取角色盒子")]
         public Image[] imgBoxes;
+        [Header("角色")]
+        public Transform[] characters;
 
         /// <summary>
         /// 選取角色方塊的四個座標
         /// </summary>
-        public List<float> posCharacters = new List<float> { -447, -149, 149, 447 };
+        public List<float> posCharacters = new List<float> { -450, -150, 150, 450 };
 
         public List<int> indexCharacters = new List<int> { 0, 1, 2, 3 };
 
@@ -45,7 +47,9 @@ namespace KID
 
                         indexCharacters[i] = index;
 
-                        imgBoxes[i].rectTransform.anchoredPosition = new Vector2(posCharacters[index], 0);
+                        imgBoxes[i].rectTransform.anchoredPosition = new Vector2(posCharacters[index], imgBoxes[i].rectTransform.anchoredPosition.y);
+                        imgBoxes[i].transform.SetParent(characters[index]);
+                        imgBoxes[i].transform.SetAsFirstSibling();
                     }
 
                     if (Input.GetKeyDown(players[i].left))
@@ -57,7 +61,9 @@ namespace KID
 
                         indexCharacters[i] = index;
 
-                        imgBoxes[i].rectTransform.anchoredPosition = new Vector2(posCharacters[index], 0);
+                        imgBoxes[i].rectTransform.anchoredPosition = new Vector2(posCharacters[index], imgBoxes[i].rectTransform.anchoredPosition.y);
+                        imgBoxes[i].transform.SetParent(characters[index]);
+                        imgBoxes[i].transform.SetAsFirstSibling();
                     }
                 }
             }

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: "\u7345\u5FC3\u760B"
-  productName: "\u5BF5\u7269\u5927\u6230 KID \u9078\u64C7\u89D2\u8272"
+  productName: "\u5BF5\u7269\u5927\u6230 KID \u9078\u64C7\u89D2\u8272\u65B0\u7248"
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}

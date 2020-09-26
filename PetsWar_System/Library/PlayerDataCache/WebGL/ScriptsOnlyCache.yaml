@@ -1,17 +1,15 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - KID.ChooseCharacter
+    - KID.ChooseCharacterBox
     - KID.PlayerData
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -23,9 +21,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Shadow
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
   sceneClasses:
-    "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272.unity":
+    "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity":
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -34,25 +33,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
     - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
       Script: {instanceID: 0}
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -71,15 +62,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11684}
+      Script: {instanceID: 11658}
     - Class: 114
       Script: {instanceID: 11754}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12102}
     - Class: 114
-      Script: {instanceID: 12552}
+      Script: {instanceID: 12176}
     - Class: 114
-      Script: {instanceID: 12650}
+      Script: {instanceID: 12554}
+    - Class: 114
+      Script: {instanceID: 12652}
     - Class: 114
       Script: {instanceID: 13012}
     - Class: 115
@@ -157,7 +150,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 90a2f82c2960d07995685873628c2d66
+      Hash: 8ff65384fbcc574c8448f99008a5ccec
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DancePlayerManager
@@ -301,7 +294,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+      Hash: e5b481989b2fdc547f7834373666143e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DanceNode
@@ -335,6 +328,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: f1b57dbd745a4b1e7b8b17834c51acbd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: KID
+    className: ChooseCharacterBox
   - hash:
       serializedVersion: 2
       Hash: 9e9bff5b14d9bc167fe715a66dc02c87
@@ -451,12 +450,6 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NewBehaviourScript
-  - hash:
-      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -571,11 +564,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 1a6defa92e4251f3b1fd5e5c306c23e3
+      Hash: 9fb965b9cd1f457059cc6a138c7788d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DanceManager
   platform: 20
   scenePathNames:
-  - "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272.unity"
-  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/ChooseCharacter
+  - "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity"
+  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/ChooseCharacterNew

@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272.unity"
     guid: 489810f13d4130049b877424df1dd144
   - enabled: 0
@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/KID/\u5834\u666F/\u96A8\u6A5F\u5834\u666F.unity"
     guid: 4c9d3602d0a56c94dab9a839faf71720
+  - enabled: 1
+    path: "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity"
+    guid: dbf47ebadddecb644b7ab37a9558d782
   m_configObjects: {}
