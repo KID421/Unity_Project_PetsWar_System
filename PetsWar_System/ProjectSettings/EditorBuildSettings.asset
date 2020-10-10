@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/KID/\u5834\u666F/\u96A8\u6A5F\u5834\u666F.unity"
     guid: 4c9d3602d0a56c94dab9a839faf71720
-  - enabled: 1
+  - enabled: 0
     path: "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity"
     guid: dbf47ebadddecb644b7ab37a9558d782
+  - enabled: 1
+    path: "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u4F46\u662F\u6BD4\u8F03\u6B63\u7684\u7248\u672C.unity"
+    guid: f6bcb3f5fdd08f14587f6835e0e4365b
   m_configObjects: {}
