@@ -70,7 +70,7 @@ namespace KID
 
                         indexCharacters[i] = index;
 
-                        CheckNextCharacter(i, 1);
+                        CheckCharacter(i, 1);
 
                         MoveImgBox(i, indexCharacters[i]);
                     }
@@ -84,7 +84,7 @@ namespace KID
 
                         indexCharacters[i] = index;
 
-                        CheckNextCharacter(i, -1);
+                        CheckCharacter(i, -1);
 
                         MoveImgBox(i, indexCharacters[i]);
                     }
@@ -115,7 +115,7 @@ namespace KID
         /// </summary>
         /// <param name="indexPlayer">玩家編號</param>
         /// <param name="checkDirection">檢查方向：1 右邊，-1 左邊</param>
-        private void CheckNextCharacter(int indexPlayer, int checkDirection)
+        private void CheckCharacter(int indexPlayer, int checkDirection)
         {
             for (int i = 0; i < charactersChoose.Length; i++)
             {
@@ -125,7 +125,7 @@ namespace KID
                 {
                     indexCharacters[indexPlayer] += checkDirection;
                     if (indexCharacters[indexPlayer] == indexCharacters.Count) indexCharacters[indexPlayer] = 0;
-                    if (indexCharacters[indexPlayer] == -1) indexCharacters[indexPlayer] = indexCharacters.Count;
+                    if (indexCharacters[indexPlayer] == -1) indexCharacters[indexPlayer] = indexCharacters.Count - 1;
                 }
             }
         }
@@ -147,7 +147,7 @@ namespace KID
                     if (indexCharacters[i] == indexCharacters.Count) indexCharacters[i] = 0;
 
                     /* 往右判斷是否該角色被選取，如果有就繼續檢查下一隻角色 */
-                    CheckNextCharacter(i, 1);
+                    CheckCharacter(i, 1);
 
                     MoveImgBox(i, indexCharacters[i]);
                 }
