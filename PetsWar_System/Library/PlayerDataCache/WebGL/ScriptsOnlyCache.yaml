@@ -3,6 +3,8 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - KID.ChooseCharacterBox
     - KID.PlayerData
+    Unity.2D.Sprite.Editor.dll:
+    - UnityEditor.U2D.Sprites.SpriteEditorWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -24,7 +26,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Mask
     - UnityEngine.UI.RawImage
   sceneClasses:
-    "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity":
+    "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u4F46\u662F\u6BD4\u8F03\u6B63\u7684\u7248\u672C.unity":
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -43,6 +45,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 89
@@ -58,23 +64,23 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11158}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11364}
+      Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11664}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 12108}
+      Script: {instanceID: 12392}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 12560}
+      Script: {instanceID: 12950}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 13066}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 13524}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 137
@@ -180,6 +186,12 @@ ScriptsOnlyBuild:
     className: TestResultRendererCallback
   - hash:
       serializedVersion: 2
+      Hash: 1d845b2535654b2525956159b2714d86
+    assemblyName: Unity.2D.SpriteShape.Runtime.dll
+    namespaceName: UnityEngine.U2D
+    className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -190,6 +202,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
+    assemblyName: Unity.2D.SpriteShape.Runtime.dll
+    namespaceName: 
+    className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
@@ -276,6 +294,12 @@ ScriptsOnlyBuild:
     className: ControlPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 0edeba255bdbade25edc357f1412ba38
+    assemblyName: Unity.2D.SpriteShape.Runtime.dll
+    namespaceName: UnityEngine.U2D
+    className: SpriteShape
+  - hash:
+      serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -330,7 +354,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: f1b57dbd745a4b1e7b8b17834c51acbd
+      Hash: 0e506f1a1c934cc5d8e9b8b3508e0c2e
     assemblyName: Assembly-CSharp.dll
     namespaceName: KID
     className: ChooseCharacterBox
@@ -568,25 +592,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DanceManager
-  - hash:
-      serializedVersion: 2
-      Hash: 1d845b2535654b2525956159b2714d86
-    assemblyName: Unity.2D.SpriteShape.Runtime.dll
-    namespaceName: UnityEngine.U2D
-    className: SpriteShapeController
-  - hash:
-      serializedVersion: 2
-      Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
-    assemblyName: Unity.2D.SpriteShape.Runtime.dll
-    namespaceName: 
-    className: SpriteShapeGeometryCache
-  - hash:
-      serializedVersion: 2
-      Hash: 0edeba255bdbade25edc357f1412ba38
-    assemblyName: Unity.2D.SpriteShape.Runtime.dll
-    namespaceName: UnityEngine.U2D
-    className: SpriteShape
   platform: 20
   scenePathNames:
-  - "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u7248\u672C.unity"
-  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/ChooseCharacterNew
+  - "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u4F46\u662F\u6BD4\u8F03\u6B63\u7684\u7248\u672C.unity"
+  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/ChooseCharacterNewBox

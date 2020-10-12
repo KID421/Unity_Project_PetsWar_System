@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking.Types;
 
 namespace KID
 {
@@ -35,6 +36,16 @@ namespace KID
         /// 角色是否被選取
         /// </summary>
         public bool[] charactersChoose = { false, false, false, false };
+
+        [Header("確認音效")]
+        public AudioClip soundChoose;
+
+        private AudioSource aud;
+
+        private void Awake()
+        {
+            aud = GetComponent<AudioSource>();
+        }
 
         private void Update()
         {
@@ -81,6 +92,7 @@ namespace KID
                     if (!playersChoose[i] && Input.GetKeyDown(players[i].a))
                     {
                         StartCoroutine(ChooseCharacterEffect(i));
+                        aud.PlayOneShot(soundChoose);
                     }
                 }
             }
@@ -118,24 +130,10 @@ namespace KID
             }
         }
 
-        ///// <summary>
-        ///// 檢查上一隻角色是否被選取
-        ///// </summary>
-        ///// <param name="indexPlayer">玩家編號</param>
-        //private void CheckPrevCharacter(int indexPlayer)
-        //{
-        //    for (int i = charactersChoose.Length; i > 0; i--)
-        //    {
-        //        if (i == indexPlayer) continue;
-
-        //        if (charactersChoose[indexCharacters[indexPlayer]])
-        //        {
-        //            indexCharacters[indexPlayer] -= 1;
-        //            if (indexCharacters[indexPlayer] == -1) indexCharacters[indexPlayer] = indexCharacters.Count;
-        //        }
-        //    }
-        //}
-
+        /// <summary>
+        /// 選取角色的特效：2D 圖片滑動下來
+        /// </summary>
+        /// <param name="index">玩家編號</param>
         private IEnumerator ChooseCharacterEffect(int index)
         {
             /* 將其他選取相同角色玩家往右移 */
