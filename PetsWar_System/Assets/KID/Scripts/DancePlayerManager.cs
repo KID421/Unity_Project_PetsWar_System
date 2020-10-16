@@ -60,7 +60,7 @@ public class DancePlayerManager : MonoBehaviour
                     List<DancdNodeType> nodes = dm.nodesPlays[0];
                     List<Transform> nodeObjects = dm.nodesPlayObjects[0];
 
-                    if (nodes[dm.nodePlaysIndex[0]] == nodeType[i])
+                    if (nodes[dm.nodePlaysIndex[i]] == nodeType[i])
                     {
                         aud.Stop();
                         print("正確");

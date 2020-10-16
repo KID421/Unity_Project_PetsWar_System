@@ -29,7 +29,8 @@ public class DanceNode : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(-speed * Time.deltaTime, 0, 0);
+        //transform.Translate(-speed * Time.deltaTime, 0, 0);
+        transform.Translate(0, -speed * Time.deltaTime, 0);
 
         if (GetComponent<RectTransform>().anchoredPosition.x <= -350 && !outOfLine)
         {
@@ -39,7 +40,7 @@ public class DanceNode : MonoBehaviour
         if (outOfLine && GetComponent<RectTransform>().anchoredPosition.x <= -360)
         {
             nodes = dm.nodesPlays[indexPlayer];
-            nodes[dm.nodePlaysIndex[indexPlayer] - 1] = DancdNodeType.無;
+            if (dm.nodePlaysIndex[indexPlayer] - 1 >= 0) nodes[dm.nodePlaysIndex[indexPlayer] - 1] = DancdNodeType.無;
         }
     }
 }
