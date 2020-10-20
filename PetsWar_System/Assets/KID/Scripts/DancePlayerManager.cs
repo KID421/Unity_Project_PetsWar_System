@@ -19,6 +19,10 @@ public class DancePlayerManager : MonoBehaviour
     private KeyCode[] playerInput = new KeyCode[7];
     private DancdNodeType[] nodeType = new DancdNodeType[7];
 
+    public int index;
+    public float score;
+    public Animation ani;
+
     private void Awake()
     {
         playerInput[0] = player.forward;
@@ -40,6 +44,8 @@ public class DancePlayerManager : MonoBehaviour
         aud = GetComponent<AudioSource>();
 
         dm = FindObjectOfType<DanceManager>();
+
+        ani["植物成長"].speed = 0;
     }
 
     private void Update()
@@ -53,19 +59,19 @@ public class DancePlayerManager : MonoBehaviour
 
         if (Input.anyKeyDown)
         {
-            for (int i = 0; i < playerInput.Length; i++)
+            
+            if (Input.GetKeyDown(playerInput[index]))
             {
-                if (Input.GetKeyDown(playerInput[i]))
-                {
-                    List<DancdNodeType> nodes = dm.nodesPlays[0];
-                    List<Transform> nodeObjects = dm.nodesPlayObjects[0];
+                List<DancdNodeType> nodes = dm.nodesPlays[index];
+                List<Transform> nodeObjects = dm.nodesPlayObjects[index];
 
-                    if (nodes[dm.nodePlaysIndex[i]] == nodeType[i])
-                    {
-                        aud.Stop();
-                        print("正確");
-                        nodeObjects[dm.nodePlaysIndex[0]].GetComponent<DanceNode>().speed = 0;
-                    }
+                if (nodes[dm.nodePlaysIndex[index]] == nodeType[index])
+                {
+                    aud.Stop();
+                    print("正確");
+                    nodeObjects[dm.nodePlaysIndex[index]].GetComponent<DanceNode>().speed = 0;
+                    score += 0.1f;
+                    ani["植物成長"].normalizedTime = score;
                 }
             }
         }

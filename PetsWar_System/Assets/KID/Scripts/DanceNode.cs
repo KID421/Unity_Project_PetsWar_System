@@ -32,12 +32,12 @@ public class DanceNode : MonoBehaviour
         //transform.Translate(-speed * Time.deltaTime, 0, 0);
         transform.Translate(0, -speed * Time.deltaTime, 0);
 
-        if (GetComponent<RectTransform>().anchoredPosition.x <= -350 && !outOfLine)
+        if (GetComponent<RectTransform>().anchoredPosition.x <= -280 && !outOfLine)
         {
             outOfLine = true;
             dm.nodePlaysIndex[indexPlayer]++;
         }
-        if (outOfLine && GetComponent<RectTransform>().anchoredPosition.x <= -360)
+        if (outOfLine && GetComponent<RectTransform>().anchoredPosition.x <= -300)
         {
             nodes = dm.nodesPlays[indexPlayer];
             if (dm.nodePlaysIndex[indexPlayer] - 1 >= 0) nodes[dm.nodePlaysIndex[indexPlayer] - 1] = DancdNodeType.無;
