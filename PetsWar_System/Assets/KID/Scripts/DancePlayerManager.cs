@@ -59,19 +59,22 @@ public class DancePlayerManager : MonoBehaviour
 
         if (Input.anyKeyDown)
         {
-            
-            if (Input.GetKeyDown(playerInput[index]))
+            for (int i = 0; i < playerInput.Length; i++)
             {
-                List<DancdNodeType> nodes = dm.nodesPlays[index];
-                List<Transform> nodeObjects = dm.nodesPlayObjects[index];
-
-                if (nodes[dm.nodePlaysIndex[index]] == nodeType[index])
+                if (Input.GetKeyDown(playerInput[i]))
                 {
-                    aud.Stop();
-                    print("正確");
-                    nodeObjects[dm.nodePlaysIndex[index]].GetComponent<DanceNode>().speed = 0;
-                    score += 0.1f;
-                    ani["植物成長"].normalizedTime = score;
+                    List<DancdNodeType> nodes = dm.nodesPlays[index];
+                    List<Transform> nodeObjects = dm.nodesPlayObjects[index];
+
+                    if (nodes[dm.nodePlaysIndex[index]] == nodeType[i])
+                    {
+                        aud.Stop();
+                        print("正確");
+                        nodeObjects[dm.nodePlaysIndex[index]].GetComponent<DanceNode>().speed = 0;
+                        Destroy(nodeObjects[dm.nodePlaysIndex[index]].gameObject);
+                        score += 0.1f;
+                        ani["植物成長"].normalizedTime = score;
+                    }
                 }
             }
         }
