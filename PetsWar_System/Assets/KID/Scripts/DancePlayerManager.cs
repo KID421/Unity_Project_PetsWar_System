@@ -69,10 +69,9 @@ public class DancePlayerManager : MonoBehaviour
                     if (nodes[dm.nodePlaysIndex[index]] == nodeType[i])
                     {
                         aud.Stop();
-                        print("正確");
                         nodeObjects[dm.nodePlaysIndex[index]].GetComponent<DanceNode>().speed = 0;
                         Destroy(nodeObjects[dm.nodePlaysIndex[index]].gameObject);
-                        score += 0.1f;
+                        score += 1f / 50f;
                         ani["植物成長"].normalizedTime = score;
                     }
                 }
