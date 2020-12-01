@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using KID;
+using UnityEngine.UI;
+using System.Collections;
 
 public class DancePlayerManager : MonoBehaviour
 {
@@ -12,6 +14,10 @@ public class DancePlayerManager : MonoBehaviour
     /// 打擊音效
     /// </summary>
     public AudioClip sounds;
+    [Header("檢查")]
+    public RectTransform check;
+    [Header("打擊特效")]
+    public Text textEffect;
 
     private AudioSource aud;
     private DanceManager dm;
@@ -73,9 +79,23 @@ public class DancePlayerManager : MonoBehaviour
                         Destroy(nodeObjects[dm.nodePlaysIndex[index]].gameObject);
                         score += 1f / 50f;
                         ani["植物成長"].normalizedTime = score;
+                        StopCoroutine(TextEffect());
+                        StartCoroutine(TextEffect());
                     }
                 }
             }
         }
+    }
+
+    private IEnumerator TextEffect()
+    {
+        while (textEffect.color.a < 1)
+        {
+            textEffect.color += new Color(1, 1, 1, 10f * Time.deltaTime);
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(0.1f);
+        textEffect.color = new Color(1, 1, 1, 0);
     }
 }

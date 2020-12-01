@@ -31,6 +31,8 @@ public class DanceManager : MonoBehaviour
     public float speed = 280;
     [Header("節點位移：700 左右")]
     public float x = 700;
+    [Header("玩家管理器")]
+    public DancePlayerManager[] dPlayerManager;
 
     [HideInInspector]
     /// <summary>

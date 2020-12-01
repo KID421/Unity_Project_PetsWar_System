@@ -1,18 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - KID.ChooseCharacterBox
+    - DanceManager
+    - DancePlayerManager
     - KID.PlayerData
-    Unity.2D.Sprite.Editor.dll:
-    - UnityEditor.U2D.Sprites.SpriteEditorWindow
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -20,13 +13,14 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Mask
-    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Text
   sceneClasses:
-    "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u4F46\u662F\u6BD4\u8F03\u6B63\u7684\u7248\u672C.unity":
+    "Assets/KID/\u5834\u666F/\u52C1\u821E\u5718\uFF1A\u7531\u4E0A\u5F80\u4E0B\u7248\u672C.unity":
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -35,11 +29,19 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
       Script: {instanceID: 0}
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -48,8 +50,6 @@ ScriptsOnlyBuild:
     - Class: 82
       Script: {instanceID: 0}
     - Class: 83
-      Script: {instanceID: 0}
-    - Class: 84
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -63,25 +63,33 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 111
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11154}
     - Class: 114
+      Script: {instanceID: 11372}
+    - Class: 114
+      Script: {instanceID: 11378}
+    - Class: 114
       Script: {instanceID: 11420}
     - Class: 114
-      Script: {instanceID: 11800}
+      Script: {instanceID: 11494}
     - Class: 114
       Script: {instanceID: 11930}
     - Class: 114
-      Script: {instanceID: 12392}
-    - Class: 114
-      Script: {instanceID: 12484}
+      Script: {instanceID: 12458}
     - Class: 114
       Script: {instanceID: 12950}
     - Class: 114
       Script: {instanceID: 13066}
     - Class: 114
       Script: {instanceID: 13524}
+    - Class: 114
+      Script: {instanceID: 13600}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 137
       Script: {instanceID: 0}
@@ -156,7 +164,7 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
-      Hash: 8ff65384fbcc574c8448f99008a5ccec
+      Hash: 0b9927eb5fb6e66e27c4c7fbdf8b25d9
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DancePlayerManager
@@ -588,11 +596,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 9fb965b9cd1f457059cc6a138c7788d4
+      Hash: 89f70730783883c4808eacec21a69d5a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DanceManager
   platform: 20
   scenePathNames:
-  - "Assets/KID/\u5834\u666F/\u9078\u64C7\u89D2\u8272\uFF1A\u659C\u89D2\u4F46\u662F\u6BD4\u8F03\u6B63\u7684\u7248\u672C.unity"
-  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/ChooseCharacterNewBox
+  - "Assets/KID/\u5834\u666F/\u52C1\u821E\u5718\uFF1A\u7531\u4E0A\u5F80\u4E0B\u7248\u672C.unity"
+  playerPath: C:/KID/Projects/Unity/Unity_Project_PetsWar_System/GameDanceV2
